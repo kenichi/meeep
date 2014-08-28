@@ -1,0 +1,42 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.leaflet-popup-content {
+  width: 450px;
+}
+.popup {
+  padding: 5px;
+  font-family: 'Gotham Narrow SSm', sans-serif, Arial;
+  font-size: 16px;
+}
+
+.profile-image img {
+  border-radius: 5px;
+}
+
+.screen-name {
+  color: rgb(136, 153, 166);
+  vertical-align: top;
+}
+.name {
+  font-weight: bold;
+  vertical-align: top;
+}
+.time {
+  color: rgb(0, 132, 180);
+  vertical-align: top;
+}
+
+.tweet-text {
+  padding: 5px;
+  color: rgb(41, 47, 51);
+}

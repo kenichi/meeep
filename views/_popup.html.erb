@@ -1,6 +1,17 @@
-<div>
-  <div class="profile-image">
-    <img src="<%= @tweet.user.profile_image_url %>"/>
+<div class="popup">
+  <div class="popup-top">
+    <span class="profile-image">
+      <img src="<%= @tweet.user.profile_image_url %>"/>
+    </span>
+    <span class="name">
+      <%= @tweet.user.name %>
+    </span>
+    <span class="screen-name">
+      @<%= @tweet.user.screen_name %> ∙
+    </span>
+    <span class="time">
+      <%= @tweet.created_at.strftime DATE_FORMAT %>
+    </span>
   </div>
   <div class="tweet-text">
     <%= @tweet.text %>
