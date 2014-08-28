@@ -1,0 +1,17 @@
+<div id="map"></div>
+
+<script>
+  var map = L.map('map');
+  var tiles = L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}');
+  map.addLayer(tiles);
+  map.setView([<%= @latitude %>, <%= @longitude %>], 6);
+  var layer = L.geoJson(null, {
+    style: { color: "#00ff00" },
+    onEachFeature: function(feature, layer) {
+      if (feature.properties && feature.properties.popup) {
+        layer.bindPopup(feature.properties.popup);
+      }
+    }
+  }).addTo(map);
+  layer.addData(<%= @point.to_json %>);
+</script>
